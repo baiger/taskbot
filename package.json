@@ -19,6 +19,8 @@
    "homepage": "https://github.com/baiger/taskbot",
    "dependencies": {
       "discord.js": "^12.2.0",
-      "dotenv": "^8.2.0"
+      "dotenv": "^8.2.0",
+      "mysql": "^2.18.1",
+      "yargs": "^15.3.1"
    }
 }

@@ -1,16 +1,25 @@
+// Node.js modules
 require('dotenv').config();
+const Discord = require('discord.js');
 
-const D = require('discord.js');
-const client = new D.Client();
+// local modules
+const Util = require('./modules/util.js');
+const Command = require('./modules/command.js');
+const Logger = require('./modules/log.js');
+const DB = require('./modules/database.js');
 
+const client = new Discord.Client();
 client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+    Logger.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
-  if (msg.content === 'test bot') {
-    msg.reply('Hello World!');
-  }
+    if (Util.isForTaskBot(msg, client)) {
+	var res = Command.parseCommand(msg.content.slice(process.env.COMMAND_PREFIX.length));
+	// console.log(res);
+	msg.reply(res);
+    }
 });
+
