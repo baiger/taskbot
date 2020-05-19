@@ -1,0 +1,24 @@
+{
+   "name": "taskbot",
+   "version": "1.0.0",
+   "description": "a todo list bot",
+   "main": "task.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/baiger/taskbot.git"
+   },
+   "keywords": [],
+   "author": "baiger",
+   "license": "",
+   "bugs": {
+      "url": "https://github.com/baiger/taskbot/issues"
+   },
+   "homepage": "https://github.com/baiger/taskbot",
+   "dependencies": {
+      "discord.js": "^12.2.0",
+      "dotenv": "^8.2.0"
+   }
+}
