@@ -19,7 +19,7 @@ client.on('message', msg => {
     if (Util.isForTaskBot(msg, client)) {
 	var res = Command.parseCommand(msg.content.slice(process.env.COMMAND_PREFIX.length));
 	// console.log(res);
-	msg.reply(res);
+	msg.reply("```" + res + "```");
     }
 });
 

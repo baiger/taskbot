@@ -41,7 +41,8 @@ exports.parseCommand = function (msg) {
 	  .fail(function (msg, err, yargs) {
     	      throw [err, msg];
 	  })
-	.help();
+	.help()
+	.wrap(60);
     
     try {
 	handled = false;
